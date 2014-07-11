@@ -8,17 +8,17 @@
                 canvas {
                         position: absolute;
                         top: 0;
-                        left: auto;
-                        right: auto;
                 }
                 #myCanvas {background-color: black;}
+                #workspace{background-color: gray;}
         </style>
+
 </head>
 <body>
+<div id="workspace">
         <!-- convus standing static -->
         <canvas id="myCanvas" width="600" height="600" style="border:5px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
-
         <script>
                 var a = document.getElementById("myCanvas");
                 var atx = a.getContext("2d");
@@ -54,47 +54,48 @@
         </script>
         <canvas id="myCanvas2" width="600" height="600" style="border:5px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.
-</canvas>
-<script>
-        var b = document.getElementById("myCanvas2")
-        var btx = b.getContext("2d");
-        btx.moveTo(0,600);
-        btx.lineTo(600,0);
-        btx.strokeStyle = 'Green';
-        btx.lineWidth = 5;
-        btx.stroke();
+        </canvas>
+        <script>
+                var b = document.getElementById("myCanvas2")
+                var btx = b.getContext("2d");
+                btx.moveTo(0,600);
+                btx.lineTo(600,0);
+                btx.strokeStyle = 'Green';
+                btx.lineWidth = 5;
+                btx.stroke();
 
-        var b = document.getElementById("myCanvas2")
-        var btx = b.getContext("2d");
-        btx.moveTo(550,0);
-        btx.lineTo(0,550);
-        btx.strokeStyle = 'Green';
-        btx.lineWidth = 5;
-        btx.stroke();
+                var b = document.getElementById("myCanvas2")
+                var btx = b.getContext("2d");
+                btx.moveTo(550,0);
+                btx.lineTo(0,550);
+                btx.strokeStyle = 'Green';
+                btx.lineWidth = 5;
+                btx.stroke();
 
-        var b = document.getElementById("myCanvas2")
-        var btx = b.getContext("2d");
-        btx.moveTo(500,0);
-        btx.lineTo(0,500);
-        btx.strokeStyle = 'Green';
-        btx.lineWidth = 5;
-        btx.stroke();
+                var b = document.getElementById("myCanvas2")
+                var btx = b.getContext("2d");
+                btx.moveTo(500,0);
+                btx.lineTo(0,500);
+                btx.strokeStyle = 'Green';
+                btx.lineWidth = 5;
+                btx.stroke();
 
-        var b = document.getElementById("myCanvas2")
-        var btx = b.getContext("2d");
-        btx.moveTo(100,600);
-        btx.lineTo(600,100);
-        btx.strokeStyle = 'Green';
-        btx.lineWidth = 5;
-        btx.stroke();
+                var b = document.getElementById("myCanvas2")
+                var btx = b.getContext("2d");
+                btx.moveTo(100,600);
+                btx.lineTo(600,100);
+                btx.strokeStyle = 'Green';
+                btx.lineWidth = 5;
+                btx.stroke();
 
-        var b = document.getElementById("myCanvas2")
-        var btx = b.getContext("2d");
-        btx.moveTo(50,600);
-        btx.lineTo(600,50);
-        btx.strokeStyle = 'Green';
-        btx.lineWidth = 5;
-        btx.stroke();
-</script>
+                var b = document.getElementById("myCanvas2")
+                var btx = b.getContext("2d");
+                btx.moveTo(50,600);
+                btx.lineTo(600,50);
+                btx.strokeStyle = 'Green';
+                btx.lineWidth = 5;
+                btx.stroke();
+        </script>
+</div>
 </body>
 </html>
