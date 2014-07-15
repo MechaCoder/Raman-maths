@@ -4,10 +4,12 @@
 			#header{
 				margin-bottom:0;
 				background-color:green;
-				font-size: 24px}
+				font-size: 46px}
 			#sidebar{
 				float:right; 
-				background-color:blue; 
+				background-color:blue;
+				font-size: 46px;
+				color: white;
 				height:90%; 
 				width:20%}
 			#content{
@@ -20,10 +22,10 @@
 			}
 			canvas{
 				position: absolute;
-				border:1px solid #d3d3d3;
+				/*border:1px solid #d3d3d3;*/
 				/*background-color: black;*/
-				width: 78%;
-				height: 87%;}
+				width: 79%;
+				height: 88%;}
 		</style>
 	</head>
 	<body onload='newQ()'>
@@ -32,39 +34,54 @@
 			<div id='sidebar'>
 				<div id='qwestion'> 
 					<div id='AWS'> ERROR </div>
+					<div id='input'>
+						<input type='text' id='userInput'>
+						<button onclick='checkAWS()'>TEST Anwser</button>
+					</div>
 				</div>
 			</div>
 			<div id="content">
 				<canvas id='grid1'></canvas>
 				<canvas id='grid2'></canvas>
 				<script>
-					var Q_intVal1 = 5;
-					var Q_intVal2 = 0;
+					var Q_intVal1 = 1;
+					var Q_intVal2 = 1;
 					var canvasRef = document.getElementById('grid1');
 					var c_maxW = canvasRef.width;
+					var c_max100W = c_maxW / 100; //a standard unit is the current Width or height of the box devided by 100.
 					var c_maxH = canvasRef.height;
+					var c_max100H = c_maxH / 100;
+					
 					function newQ(){
 						//Q_intVal1 = Math.ceil(Math.random() * 5);
 						//alert(Q_intVal1);
 						//Q_intVal2 = Math.ceil(Math.random() * 5);
 						//alert(Q_intVal2);
+						//define the object..
 						document.getElementById('AWS').innerHTML = Q_intVal1  + ' x ' + Q_intVal2;
+						//
 						g1 = document.getElementById('grid1');
 						g1_obj = g1.getContext('2d');
 						g1_obj.strokeStyle = 'green';
 						g1_obj.lineWidth = 2;
+
+						g2 = document.getElementById('grid2');
+						g2_obj = g2.getContext('2d');
+						g2_obj.strokeStyle = 'blue';
+						g2_obj.lineWidth = 2
+
 						if (Q_intVal1 == 1){
 							g1_obj.moveTo(0,0);
 							g1_obj.lineTo(c_maxW,c_maxH);
 							g1_obj.stroke();
 						};
 						if (Q_intVal1 == 2){
-							g1_obj.moveTo(10,0);
-							g1_obj.lineTo(c_maxW,c_maxH - 10);
+							g1_obj.moveTo(c_max100H * 20,0);
+							g1_obj.lineTo(c_maxW, c_max100H * 80);
 							g1_obj.stroke();
 
-							g1_obj.moveTo(0,10);
-							g1_obj.lineTo(c_maxW - 10,c_maxH);
+							g1_obj.moveTo(c_max100W * 0,c_max100H* 15);
+							g1_obj.lineTo(c_max100W * 85,c_max100H * 100);
 							g1_obj.stroke();
 						};
 						if (Q_intVal1 == 3){
@@ -117,8 +134,95 @@
 							g1_obj.moveTo(0,20);
 							g1_obj.lineTo(c_maxW - 20,c_maxH);
 							g1_obj.stroke();		
+						}; 
+						g2 = document.getElementById('grid2');
+						g2_obj = g2.getContext('2d');
+						g2_obj.strokeStyle = 'blue';
+						g2_obj.lineWidth = 2
+						
+						if (Q_intVal2 ==1){
+							//c_max100W
+							g2_obj.moveTo(0,c_maxH);
+							g2_obj.lineTo(c_maxW,0);
+							g2_obj.stroke();
+						};
+						if (Q_intVal2==2){
+							g2_obj.moveTo(c_max100W * 95,0);
+							g2_obj.lineTo(0,c_max100H *95);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 10);
+							g2_obj.lineTo(c_max100W * 10,c_max100H * 100);
+							g2_obj.stroke();
+						};
+						if (Q_intVal2==3){
+							g2_obj.moveTo(0,c_maxH);
+							g2_obj.lineTo(c_maxW,0);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_max100W * 95,0);
+							g2_obj.lineTo(0,c_max100H *95);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 10);
+							g2_obj.lineTo(c_max100W * 10,c_max100H * 100);
+							g2_obj.stroke();
+						};
+						if (Q_intVal2==4){
+							g2_obj.moveTo(c_max100W * 95,0);
+							g2_obj.lineTo(0,c_max100H *95);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_max100W * 85,0);
+							g2_obj.lineTo(0,c_max100H *85);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 10);
+							g2_obj.lineTo(c_max100W * 10,c_max100H * 100);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 20);
+							g2_obj.lineTo(c_max100W * 20,c_max100H * 100);
+							g2_obj.stroke();
+						};
+						if (Q_intVal2==5){
+							g2_obj.moveTo(0,c_maxH);
+							g2_obj.lineTo(c_maxW,0);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_max100W * 95,0);
+							g2_obj.lineTo(0,c_max100H *95);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_max100W * 85,0);
+							g2_obj.lineTo(0,c_max100H *85);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 10);
+							g2_obj.lineTo(c_max100W * 10,c_max100H * 100);
+							g2_obj.stroke();
+
+							g2_obj.moveTo(c_maxW,c_max100H * 20);
+							g2_obj.lineTo(c_max100W * 20,c_max100H * 100);
+							g2_obj.stroke();
 						};
 					}
+					function checkAWS(){
+						//alert('click');
+						var userVAL = document.getElementById('userInput').value;
+						testVal = Q_intVal1 * Q_intVal2;
+						//alert(userVAL);
+						if (testVal == parseInt(userVAL) ){
+							alert('Welldone');
+							g1_obj.fillRect(0,0,c_maxW,c_maxH);
+							g2_obj.fillRect(0,0,c_maxW,c_maxH);
+							newQ();
+
+						}else{
+							alert('Try Again')
+						}; 
+						//alert('click')
+					};
 				</script>
 			</div>
 			<div id='footer' style='background-color:green;clear:both'>created by M.Proudman</div>
