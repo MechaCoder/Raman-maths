@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			canvas{
+				position: absolute;}
+			.but_box{
+				background: blue;
+				float: right;
+				width: 25%
+				height: 50%;}
+			.qwestion{
+				font-size: 36px;}
+		</style>
+	</head>
+	<body onload="newQ()">
+		<div id='workspance'>
+		<canvas id="grid1" width="500" height="500" style="border:1px solid #d3d3d3;">
+		Your browser does not support the HTML5 canvas tag.</canvas>
+		<canvas id="grid2" width="500" height="500" style="border:1px solid #d3d3d3;">
+		Your browser does not support the HTML5 canvas tag.</canvas>
+
+		<script>
+			var e = 0
+			var Q_intVal1 = 0;
+			var Q_intVal2 = 0;
+			function newQ (){
+				Q_intVal1 = Math.ceil(Math.random() * 5);
+				Q_intVal2 = Math.ceil(Math.random() * 5);
+				document.getElementById('qwestion').innerHTML = Q_intVal1 + 'X' + Q_intVal2;
+				if(Q_intVal1 == 1){
+					g1l1 = document.getElementById("grid1");
+					g1l1_obj = g1l1.getContext("2d");
+					g1l1_obj.moveTo(0,0);
+					g1l1_obj.lineTo(600,600);
+					g1l1_obj.strokeStyle = 'green';
+					g1l1_obj.lineWidth = 10;
+					g1l1_obj.stroke();
+				}
+				if(Q_intVal1 == 2){
+					g1l2 = document.getElementById("grid1");
+					g1l2_obj = g1l2.getContext("2d");
+					g1l2_obj.moveTo(0,50);
+					g1l2_obj.lineTo(550,600);
+					g1l2_obj.strokeStyle = 'green';
+					g1l2_obj.lineWidth = 10;
+					g1l2_obj.stroke();
+					//
+					g1l3 = document.getElementById("grid1");
+					g1l3_obj = g1l3.getContext('2d');
+					g1l3_obj.moveTo(50,0);
+					g1l3_obj.lineTo(600,550);
+					g1l3_obj.strokeStyle = 'green';
+					g1l3_obj.lineWidth = 10;
+					g1l3_obj.stroke();
+					}
+				if(Q_intVal1 == 3){
+					g1l1 = document.getElementById("grid1");
+					g1l1_obj = g1l1.getContext("2d");
+					g1l1_obj.moveTo(0,0);
+					g1l1_obj.lineTo(600,600);
+					g1l1_obj.strokeStyle = 'green';
+					g1l1_obj.lineWidth = 10;
+					g1l1_obj.stroke();
+					//
+					g1l2 = document.getElementById("grid1");
+					g1l2_obj = g1l2.getContext("2d");
+					g1l2_obj.moveTo(0,50);
+					g1l2_obj.lineTo(550,600);
+					g1l2_obj.strokeStyle = 'green';
+					g1l2_obj.lineWidth = 10;
+					g1l2_obj.stroke();
+					//
+					g1l3 = document.getElementById("grid1");
+					g1l3_obj = g1l3.getContext('2d');
+					g1l3_obj.moveTo(50,0);
+					g1l3_obj.lineTo(600,550);
+					g1l3_obj.strokeStyle = 'green';
+					g1l3_obj.lineWidth = 10;
+					g1l3_obj.stroke();
+					}
+				if(Q_intVal1 == 4){
+					g1l2 = document.getElementById("grid1");
+					g1l2_obj = g1l2.getContext("2d");
+					g1l2_obj.moveTo(0,50);
+					g1l2_obj.lineTo(550,600);
+					g1l2_obj.strokeStyle = 'green';
+					g1l2_obj.lineWidth = 10;
+					g1l2_obj.stroke();
+					//
+					g1l4 = document.getElementById("grid1");
+					g1l4_obj = g1l4.getContext("2d");
+					g1l4_obj.moveTo(0,100);
+					g1l4_obj.lineTo(500,600);
+					g1l4_obj.strokeStyle = 'green';
+					g1l4_obj.lineWidth = 10;
+					g1l4_obj.stroke()
+					//
+					g1l3 = document.getElementById("grid1");
+					g1l3_obj = g1l3.getContext('2d');
+					g1l3_obj.moveTo(50,0);
+					g1l3_obj.lineTo(600,550);
+					g1l3_obj.strokeStyle = 'green';
+					g1l3_obj.lineWidth = 10;
+					g1l3_obj.stroke();
+					//
+					g1l5 = document.getElementById("grid1");
+					g1l5_obj = g1l5.getContext('2d')
+					g1l5_obj.moveTo(100,0);
+					g1l5_obj.lineTo(600,500);
+					g1l5_obj.strokeStyle = 'green';
+					g1l5_obj.lineWidth = 10;
+					g1l5_obj.stroke();
+				}
+				if(Q_intVal1 == 5){
+					g1l1 = document.getElementById("grid1");
+					g1l1_obj = g1l1.getContext("2d");
+					g1l1_obj.moveTo(0,0);
+					g1l1_obj.lineTo(600,600);
+					g1l1_obj.strokeStyle = 'green';
+					g1l1_obj.lineWidth = 10;
+					g1l1_obj.stroke();
+					//
+					g1l2 = document.getElementById("grid1");
+					g1l2_obj = g1l2.getContext("2d");
+					g1l2_obj.moveTo(0,50);
+					g1l2_obj.lineTo(550,600);
+					g1l2_obj.strokeStyle = 'green';
+					g1l2_obj.lineWidth = 10;
+					g1l2_obj.stroke();
+					//
+					g1l4 = document.getElementById("grid1");
+					g1l4_obj = g1l4.getContext("2d");
+					g1l4_obj.moveTo(0,100);
+					g1l4_obj.lineTo(500,600);
+					g1l4_obj.strokeStyle = 'green';
+					g1l4_obj.lineWidth = 10;
+					g1l4_obj.stroke()
+					//
+					g1l3 = document.getElementById("grid1");
+					g1l3_obj = g1l3.getContext('2d');
+					g1l3_obj.moveTo(50,0);
+					g1l3_obj.lineTo(600,550);
+					g1l3_obj.strokeStyle = 'green';
+					g1l3_obj.lineWidth = 10;
+					g1l3_obj.stroke();
+					//
+					g1l5 = document.getElementById("grid1");
+					g1l5_obj = g1l5.getContext('2d')
+					g1l5_obj.moveTo(100,0);
+					g1l5_obj.lineTo(600,500);
+					g1l5_obj.strokeStyle = 'green';
+					g1l5_obj.lineWidth = 10;
+					g1l5_obj.stroke();
+				}
+				if(Q_intVal2 == 1){
+					g2l1 = document.getElementById("grid2");
+					g2l1_obj = g2l1.getContext("2d");
+					g2l1_obj.moveTo(0,600);
+					g2l1_obj.lineTo(600,0);
+					g2l1_obj.strokeStyle = 'red';
+					g2l1_obj.lineWidth = 10;
+					g2l1_obj.stroke()
+				}
+				if(Q_intVal2 == 2){
+					g2l2 = document.getElementById('grid2');
+					g2l2_obj = g2l2.getContext("2d");
+					g2l2_obj.moveTo(0,550);
+					g2l2_obj.lineTo(550,0);
+					g2l2_obj.strokeStyle = 'red';
+					g2l2_obj.lineWidth = 10;
+					g2l2_obj.stroke();
+					//
+					g2l3 = document.getElementById('grid2');
+					g2l3_obj = g2l2.getContext("2d");
+					g2l3_obj.moveTo(50,600);
+					g2l3_obj.lineTo(600,50);
+					g2l3_obj.strokeStyle = 'red';
+					g2l3_obj.lineWidth = 10;
+					g2l3_obj.stroke();
+				}
+				if(Q_intVal2 == 3){
+					g2l1 = document.getElementById("grid2");
+					g2l1_obj = g2l1.getContext("2d");
+					g2l1_obj.moveTo(0,600);
+					g2l1_obj.lineTo(600,0);
+					g2l1_obj.strokeStyle = 'red';
+					g2l1_obj.lineWidth = 10;
+					g2l1_obj.stroke()
+					//
+					g2l2 = document.getElementById('grid2');
+					g2l2_obj = g2l2.getContext("2d");
+					g2l2_obj.moveTo(0,550);
+					g2l2_obj.lineTo(550,0);
+					g2l2_obj.strokeStyle = 'red';
+					g2l2_obj.lineWidth = 10;
+					g2l2_obj.stroke();
+					//
+					g2l3 = document.getElementById('grid2');
+					g2l3_obj = g2l2.getContext("2d");
+					g2l3_obj.moveTo(50,600);
+					g2l3_obj.lineTo(600,50);
+					g2l3_obj.strokeStyle = 'red';
+					g2l3_obj.lineWidth = 10;
+					g2l3_obj.stroke();
+				}
+				if(Q_intVal2 == 4){
+					g2l2 = document.getElementById('grid2');
+					g2l2_obj = g2l2.getContext("2d");
+					g2l2_obj.moveTo(0,550);
+					g2l2_obj.lineTo(550,0);
+					g2l2_obj.strokeStyle = 'red';
+					g2l2_obj.lineWidth = 10;
+					g2l2_obj.stroke();
+
+					g2l3 = document.getElementById('grid2');
+					g2l3_obj = g2l3.getContext('2d');
+					g2l3_obj.moveTo(0,500);
+					g2l3_obj.lineTo(500,0);
+					g2l3_obj.strokeStyle = 'red';
+					g2l3_obj.lineWidth = 10;
+					g2l3_obj.stroke();
+
+					g2l4 = document.getElementById('grid2');
+					g2l4_obj = g2l4.getContext('2d');
+					g2l4_obj.moveTo(50,600);
+					g2l4_obj.lineTo(600,50);
+					g2l4_obj.strokeStyle = 'red';
+					g2l4_obj.lineWidth = 10;
+					g2l4_obj.stroke();
+
+					g2l5 =document.getElementById('grid2');
+					g2l5_obj = g2l5.getContext('2d');
+					g2l5_obj.moveTo(100,600);
+					g2l5_obj.lineTo(600,100);
+					g2l5_obj.strokeStyle = 'red';
+					g2l5_obj.lineWidth = 10;
+					g2l5_obj.stroke();
+				}
+				if(Q_intVal2 == 5){
+					g2l1 = document.getElementById("grid2");
+					g2l1_obj = g2l1.getContext("2d");
+					g2l1_obj.moveTo(0,600);
+					g2l1_obj.lineTo(600,0);
+					g2l1_obj.stroke()
+
+					g2l2 = document.getElementById('grid2');
+					g2l2_obj = g2l2.getContext("2d");
+					g2l2_obj.moveTo(0,550);
+					g2l2_obj.lineTo(550,0);
+					g2l2_obj.strokeStyle = 'red';
+					g2l2_obj.lineWidth = 10;
+					g2l2_obj.stroke();
+
+					g2l3 = document.getElementById('grid2');
+					g2l3_obj = g2l3.getContext('2d');
+					g2l3_obj.moveTo(0,500);
+					g2l3_obj.lineTo(500,0);
+					g2l3_obj.strokeStyle = 'red';
+					g2l3_obj.lineWidth = 10;
+					g2l3_obj.stroke();
+
+					g2l4 = document.getElementById('grid2');
+					g2l4_obj = g2l4.getContext('2d');
+					g2l4_obj.moveTo(50,600);
+					g2l4_obj.lineTo(600,50);
+					g2l4_obj.strokeStyle = 'red';
+					g2l4_obj.lineWidth = 10;
+					g2l4_obj.stroke();
+
+					g2l5 =document.getElementById('grid2');
+					g2l5_obj = g2l5.getContext('2d');
+					g2l5_obj.moveTo(100,600);
+					g2l5_obj.lineTo(600,100);
+					g2l5_obj.strokeStyle = 'red';
+					g2l5_obj.lineWidth = 10;
+					g2l5_obj.stroke();	
+				}
+
+				//e = 1
+			}
+
+			function Qnew(){
+				location.reload();}
+		</script>
+	</div>
+	<div id='but_box' class='but_box'>
+		<button onclick='Qnew()'>Alert</button> <p id='qwestion' class='qwestion'> Qwestion goes here </p>
+	</div>
+	</body>
+</html>

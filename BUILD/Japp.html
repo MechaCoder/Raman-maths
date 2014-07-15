@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<style type="text/css">
+			#header{
+				margin-bottom:0;
+				background-color:green;
+				font-size: 24px}
+			#sidebar{
+				float:right; 
+				background-color:blue; 
+				height:90%; 
+				width:20%}
+			#content{
+				background-color:black;
+				height:90%;
+				width:80%;
+				float:left;}
+			#qwestion{
+				text-align: center;
+			}
+			canvas{
+				position: absolute;
+				border:1px solid #d3d3d3;
+				/*background-color: black;*/
+				width: 78%;
+				height: 87%;}
+		</style>
+	</head>
+	<body onload='newQ()'>
+		<div id='layout_box' style="width:100%;">
+			<div id='header'>Japanese Mathmatic System Demo</div>
+			<div id='sidebar'>
+				<div id='qwestion'> 
+					<div id='AWS'> ERROR </div>
+				</div>
+			</div>
+			<div id="content">
+				<canvas id='grid1'></canvas>
+				<canvas id='grid2'></canvas>
+				<script>
+					var Q_intVal1 = 5;
+					var Q_intVal2 = 0;
+					var canvasRef = document.getElementById('grid1');
+					var c_maxW = canvasRef.width;
+					var c_maxH = canvasRef.height;
+					function newQ(){
+						//Q_intVal1 = Math.ceil(Math.random() * 5);
+						//alert(Q_intVal1);
+						//Q_intVal2 = Math.ceil(Math.random() * 5);
+						//alert(Q_intVal2);
+						document.getElementById('AWS').innerHTML = Q_intVal1  + ' x ' + Q_intVal2;
+						g1 = document.getElementById('grid1');
+						g1_obj = g1.getContext('2d');
+						g1_obj.strokeStyle = 'green';
+						g1_obj.lineWidth = 2;
+						if (Q_intVal1 == 1){
+							g1_obj.moveTo(0,0);
+							g1_obj.lineTo(c_maxW,c_maxH);
+							g1_obj.stroke();
+						};
+						if (Q_intVal1 == 2){
+							g1_obj.moveTo(10,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 10);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,10);
+							g1_obj.lineTo(c_maxW - 10,c_maxH);
+							g1_obj.stroke();
+						};
+						if (Q_intVal1 == 3){
+							g1_obj.moveTo(0,0);
+							g1_obj.lineTo(c_maxW,c_maxH);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(10,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 10);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,10);
+							g1_obj.lineTo(c_maxW - 10,c_maxH);
+							g1_obj.stroke();
+						};
+						if (Q_intVal1 == 4){
+							g1_obj.moveTo(10,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 10);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,10);
+							g1_obj.lineTo(c_maxW - 10,c_maxH);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(20,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 20);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,20);
+							g1_obj.lineTo(c_maxW - 20,c_maxH);
+							g1_obj.stroke();						
+						};
+						if (Q_intVal1 == 5){
+							g1_obj.moveTo(0,0);
+							g1_obj.lineTo(c_maxW,c_maxH);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(10,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 10);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,10);
+							g1_obj.lineTo(c_maxW - 10,c_maxH);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(20,0);
+							g1_obj.lineTo(c_maxW,c_maxH - 20);
+							g1_obj.stroke();
+
+							g1_obj.moveTo(0,20);
+							g1_obj.lineTo(c_maxW - 20,c_maxH);
+							g1_obj.stroke();		
+						};
+					}
+				</script>
+			</div>
+			<div id='footer' style='background-color:green;clear:both'>created by M.Proudman</div>
+		</div>
+	</body>
+</html>
