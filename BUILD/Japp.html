@@ -23,10 +23,20 @@
 			}
 			canvas{
 				position: absolute;
-				/*border:1px solid #d3d3d3;*/
-				/*background-color: black;*/
-				width: 78.5%;
+				/*border:1px solid brown;*/
+				width: 78.0%;
 				height: 88%;}
+			button{
+				width: 80%;
+				font-size: 24px;
+			}
+			input{
+				width: 90%;
+				height: 10%;
+				font-size: 24px;
+				text-align: center;
+			}
+			/*decertions - filling white space*/
 		</style>
 	</head>
 	<body onload='newQ()'>
@@ -34,11 +44,12 @@
 			<div id='header'>Japanese Mathmatic System Demo</div>
 			<div id='sidebar'>
 				<div id='qwestion'> 
-					<div id='AWS'> ERROR </div>
+					<div id='AWS'> ERROR1 </div>
+					<div id='AW2'> ERROR2 </div>
 					<div id='input'>
 						<input type='text' id='userInput'>
 						<button onclick='check()'>TEST Anwser</button>
-						<button onclick='newQ()'>new Qwestion</button>
+						<!--<button onclick='newQ()'>new Qwestion</button>-->
 					</div>
 				</div>
 			</div>
@@ -57,13 +68,14 @@
 					//...standard units
 					var standW = Cwidth / 100;
 					var standH = Cheight / 100;
-					var Qint1 = 4;
-					var Qint2 = 5;
+					var Qint1 = 0;
+					var Qint2 = 0;
 
 					function newQ(){
-						//Qint1 = Math.ceil(Math.random()*5);
-						//Qint2 = Math.ceil(Math.random()*5);
-						document.getElementById('AWS').innerHTML = Qint1 + ' X ' + Qint2;
+						Qint1 = Math.ceil(Math.random()*5);
+						Qint2 = Math.ceil(Math.random()*5);
+						document.getElementById('AWS').innerHTML = Qint1 //+ ' x ' + Qint2;
+						document.getElementById('AW2').innerHTML = Qint2
 						//alert('Qint1 == 1')
 						//alert(' ' + Cwidth + ' & ' + Cheight);
 						if (Qint1 == 1){
