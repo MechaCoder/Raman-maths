@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<style type="text/css">
+			body{
+				background: purple;
+			}
 			#header{
 				margin-bottom:0;
 				background-color:green;
@@ -19,7 +23,16 @@
 				width:80%;
 				float:left;}
 			#qwestion{
+				text-align: left;
+				margin-left: 10%;
+			}
+			#footer{
+				background-color:green;
+				color:white;
 				text-align: center;
+				float:right;
+				clear:right;
+				width:20%;
 			}
 			canvas{
 				position: absolute;
@@ -27,7 +40,7 @@
 				width: 78.0%;
 				height: 88%;}
 			button{
-				width: 80%;
+				width: 90%;
 				font-size: 24px;
 			}
 			input{
@@ -38,6 +51,8 @@
 			}
 			/*decertions - filling white space*/
 		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		</script>
 	</head>
 	<body onload='newQ()'>
 		<div id='layout_box' style="width:100%;">
@@ -47,14 +62,14 @@
 					<div id='AWS'> ERROR1 </div>
 					<div id='AW2'> ERROR2 </div>
 					<div id='input'>
-						<input type='text' id='userInput'>
+						<input type='text' id='userInput' onKeydown="Javascript: if(event.keyCode==13){check()};">
 						<button onclick='check()'>TEST Anwser</button>
 						<!--<button onclick='newQ()'>new Qwestion</button>-->
 					</div>
 				</div>
 			</div>
-			<div id="content">
-				<canvas id='grid1'></canvas>
+			<div id="content" style="background:black;">
+				<canvas id='grid1' style="background: black;"></canvas>
 				<canvas id='grid2'></canvas>
 				<script>
 					//Canvas
@@ -74,8 +89,8 @@
 					function newQ(){
 						Qint1 = Math.ceil(Math.random()*5);
 						Qint2 = Math.ceil(Math.random()*5);
-						document.getElementById('AWS').innerHTML = Qint1 //+ ' x ' + Qint2;
-						document.getElementById('AW2').innerHTML = Qint2
+						document.getElementById('AWS').innerHTML = Qint1; //+ ' x ' + Qint2;
+						document.getElementById('AW2').innerHTML = Qint2 + ' X ';
 						//alert('Qint1 == 1')
 						//alert(' ' + Cwidth + ' & ' + Cheight);
 						if (Qint1 == 1){
@@ -262,7 +277,7 @@
 					};
 				</script>
 			</div>
-			<div id='footer' style='background-color:green;clear:both'>created by M.Proudman</div>
+			<div id='footer'>created by M.Proudman</div>
 		</div>
 	</body>
 </html>
