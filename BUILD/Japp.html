@@ -46,8 +46,6 @@
 				<canvas id='grid1'></canvas>
 				<canvas id='grid2'></canvas>
 				<script>
-					Qint1 = 0;
-					Qint2 = 0;
 					//Canvas
 					var c1 = document.getElementById('grid1');
 					var c1_obj = c1.getContext('2d');
@@ -59,7 +57,7 @@
 					//...standard units
 					var standW = Cwidth / 100;
 					var standH = Cheight / 100;
-					var Qint1 = 5;
+					var Qint1 = 4;
 					var Qint2 = 5;
 
 					function newQ(){
@@ -212,20 +210,20 @@
 						if (Qint2 == 5){
 							c2_obj.beginPath();
 							//
-							c2_obj.moveTo(0,0);
-							c2_obj.lineTo(Cwidth,Cheight);
+							c2_obj.moveTo(0,Cheight);
+							c2_obj.lineTo(Cwidth,0);
 							//
-							c2_obj.moveTo(standW * 10, 0);
-							c2_obj.lineTo(Cwidth,standH * 90)
+							c2_obj.moveTo(standW * 15, Cheight);
+							c2_obj.lineTo(Cwidth , standH * 15);
 							//
-							c2_obj.moveTo(0, standH * 10);
-							c2_obj.lineTo(standH * 180, Cheight);
+							c2_obj.moveTo(standW * 5, Cheight);
+							c2_obj.lineTo(Cwidth , standH * 5);
 							//
-							c2_obj.moveTo(0, standH * 30);
-							c2_obj.lineTo(standW * 80, Cheight);
+							c2_obj.moveTo(0,standH * 95,0);
+							c2_obj.lineTo(standW * 95, 0);
 							//
-							c2_obj.moveTo(standW * 20,0);
-							c2_obj.lineTo(Cwidth, standH * 70);
+							c2_obj.moveTo(0,standH * 85,0);
+							c2_obj.lineTo(standW * 85, 0);
 							//
 							c2_obj.closePath();
 							c2_obj.lineWidth = 2;
